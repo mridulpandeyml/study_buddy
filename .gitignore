@@ -1,0 +1,128 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+downloads/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.*
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# VS Code / IDE
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/secrets.toml
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Data Files (Optional)
+# Keep raw user uploads private
+# =========================
+data/raw/*
+data/processed/*
+data/chunks/*
+data/user_data/*
+
+# Keep folder structure but not files
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/chunks/.gitkeep
+!data/user_data/.gitkeep
+
+# =========================
+# Vector Store / Embeddings
+# =========================
+vector_store/*
+!vector_store/.gitkeep
+
+# =========================
+# Models
+# =========================
+models/*
+!models/.gitkeep
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.temp
+*.bak
+
+# =========================
+# Test / Coverage
+# =========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+# SQLite / Local DB
+# =========================
+*.db
+*.sqlite3
+
+# =========================
+# Tesseract Output / OCR Temp
+# =========================
+*.txt
+
+# =========================
+# Node (if ever added later)
+# =========================
+node_modules/
+
+# =========================
+# Mac / Linux hidden
+# =========================
+.*.swp
