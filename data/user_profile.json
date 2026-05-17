@@ -1,0 +1,41 @@
+{
+    "name": "Student",
+    "mode": "Standard",
+    "quiz_scores": [
+        {
+            "topic": "sql commands",
+            "score": 2,
+            "total": 3,
+            "percentage": 66.66666666666666
+        },
+        {
+            "topic": "deadlock",
+            "score": 4,
+            "total": 5,
+            "percentage": 80.0
+        },
+        {
+            "topic": "operating system",
+            "score": 3,
+            "total": 4,
+            "percentage": 75.0
+        }
+    ],
+    "topics_studied": [
+        "Complete SQL Mastery Course",
+        "LIMIT 3",
+        "REGEXP",
+        "SQL",
+        "NULL",
+        "OpenAI Whisper",
+        "NLP",
+        "Pandas",
+        "Flask",
+        "Streamlit",
+        "Operating System",
+        "Linux",
+        "FCFS",
+        "Apple",
+        "CPU"
+    ]
+}

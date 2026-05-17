@@ -1,25 +1,25 @@
 import streamlit as st
-from src.input.pdf_loader import load_pdf  
-from src.input.document_router import doc_router
-import pytesseract
-from PIL import Image
-import os
-st.title("study buddy 📚")
 
-uploaded_file = st.file_uploader(
-    "Upload a PDF or Image file",
-    type=["pdf", "jpg", "jpeg", "png"]
+st.set_page_config(
+    page_title="Study Buddy 📚",
+    page_icon="📚",
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-if uploaded_file is not None:
-    file_extension = uploaded_file.name.split(".")[-1].lower()
-    temp_file_path = f"temp_file.{file_extension}"
-    raw_file= os.path.join("data/raw", temp_file_path)
-    with open(raw_file, "wb") as f:
-        f.write(uploaded_file.getbuffer())
+st.title("Welcome to Study Buddy 📚")
+st.markdown("""
+### Your Adaptive AI Learning System
 
-    try:
-        extracted_text = doc_router(raw_file)
-        st.text_area("Extracted Text", extracted_text, height=300)
-    except ValueError as e:
-        st.error(str(e))
+**How to use this app:**
+1. **Upload Hub**: Upload your PDFs or images to extract text, process knowledge, and build your personalized learning database.
+2. **Ask AI**: Ask questions about your uploaded documents. Choose your difficulty level (Beginner, Standard, Advanced) and get context-aware answers.
+3. **Quiz Center**: Test your knowledge! The AI will dynamically generate multiple-choice quizzes based on your documents.
+4. **Dashboard**: Track your progress, view your quiz scores, and see your weak areas.
+
+👈 Select a page from the sidebar to get started!
+""")
+
+# Optional: Initialize session state variables if needed across pages
+if "vector_store" not in st.session_state:
+    st.session_state.vector_store = None
